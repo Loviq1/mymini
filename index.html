@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Mini App</title>
+</head>
+<body>
+  <h1>Добро пожаловать в Telegram Mini App!</h1>
+  <button id="start">Нажми меня</button>
+  <script>
+    // Telegram Web App API
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+
+    document.getElementById("start").addEventListener("click", () => {
+      tg.sendData("Данные, отправленные боту!"); // Отправка данных боту
+    });
+  </script>
+</body>
+</html>
